@@ -1,4 +1,3 @@
-// Мобильное меню
 let burger = document.querySelector('#icon-menu');
 let overlay = document.querySelector('#overlay');
 let mobileMenu = document.querySelector('#mobile-menu');
@@ -16,7 +15,7 @@ burger.addEventListener('click', function () {
       burger.classList.remove('_active');
       mobileMenu.classList.remove('_active');
 
-    })
+    });
   }
 
   if (burger.classList.contains('_active')) {
@@ -26,14 +25,12 @@ burger.addEventListener('click', function () {
         document.querySelector('body').classList.remove('_lock');
         burger.classList.remove('_active');
         mobileMenu.classList.remove('_active');
-      })
-    })
+      });
+    });
   }
-})
+});
 
-//=======================================================
 const colorButton = document.getElementById('color');
 colorButton.addEventListener('change', function (e) {
-  console.log(e.target.value);
   document.querySelector('body').style.setProperty('--accent-color', e.target.value);
 });
